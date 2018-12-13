@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F7019E2B21BF138300603363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7019E2A21BF138300603363 /* AppDelegate.swift */; };
-		F7019E2D21BF138300603363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7019E2C21BF138300603363 /* ViewController.swift */; };
 		F7019E3021BF138300603363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7019E2E21BF138300603363 /* Main.storyboard */; };
 		F7019E3221BF138500603363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7019E3121BF138500603363 /* Assets.xcassets */; };
 		F7019E3521BF138500603363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7019E3321BF138500603363 /* LaunchScreen.storyboard */; };
+		F7019E4321BF13E700603363 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7019E4221BF13E700603363 /* Post.swift */; };
+		F7019E4521BF17C800603363 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7019E4421BF17C800603363 /* MessageController.swift */; };
+		F7019E4721BF362500603363 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7019E4621BF362500603363 /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7019E2721BF138300603363 /* Messaging23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messaging23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7019E2A21BF138300603363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7019E2C21BF138300603363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7019E2F21BF138300603363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7019E3121BF138500603363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7019E3421BF138500603363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7019E3621BF138500603363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7019E4221BF13E700603363 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F7019E4421BF17C800603363 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		F7019E4621BF362500603363 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,56 @@
 		F7019E2921BF138300603363 /* Messaging23 */ = {
 			isa = PBXGroup;
 			children = (
-				F7019E2A21BF138300603363 /* AppDelegate.swift */,
-				F7019E2C21BF138300603363 /* ViewController.swift */,
+				F7019E3F21BF13C100603363 /* view controllers */,
+				F7019E3E21BF13B500603363 /* model controller */,
+				F7019E3D21BF13B000603363 /* model */,
+				F7019E3C21BF13A500603363 /* resources */,
 				F7019E2E21BF138300603363 /* Main.storyboard */,
+			);
+			path = Messaging23;
+			sourceTree = "<group>";
+		};
+		F7019E3C21BF13A500603363 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7019E2A21BF138300603363 /* AppDelegate.swift */,
 				F7019E3121BF138500603363 /* Assets.xcassets */,
 				F7019E3321BF138500603363 /* LaunchScreen.storyboard */,
 				F7019E3621BF138500603363 /* Info.plist */,
 			);
-			path = Messaging23;
+			path = resources;
+			sourceTree = "<group>";
+		};
+		F7019E3D21BF13B000603363 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F7019E4221BF13E700603363 /* Post.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F7019E3E21BF13B500603363 /* model controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7019E4421BF17C800603363 /* MessageController.swift */,
+			);
+			path = "model controller";
+			sourceTree = "<group>";
+		};
+		F7019E3F21BF13C100603363 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7019E4121BF13D600603363 /* view */,
+			);
+			path = "view controllers";
+			sourceTree = "<group>";
+		};
+		F7019E4121BF13D600603363 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F7019E4621BF362500603363 /* MessageViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7019E2D21BF138300603363 /* ViewController.swift in Sources */,
+				F7019E4721BF362500603363 /* MessageViewController.swift in Sources */,
 				F7019E2B21BF138300603363 /* AppDelegate.swift in Sources */,
+				F7019E4321BF13E700603363 /* Post.swift in Sources */,
+				F7019E4521BF17C800603363 /* MessageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6XHS9MLH4Q;
-				INFOPLIST_FILE = Messaging23/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Messaging23/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6XHS9MLH4Q;
-				INFOPLIST_FILE = Messaging23/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Messaging23/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
